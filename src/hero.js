@@ -251,7 +251,10 @@ const renderConversionBenefits = (items) =>
   items
     .map(
       (item) => `
-        <div class="conversion-table__cell">${item}</div>
+        <div class="conversion-table__cell">
+          <span class="conversion-table__badge" aria-hidden="true"></span>
+          <span class="conversion-table__label">${item}</span>
+        </div>
       `,
     )
     .join('');
@@ -630,9 +633,11 @@ function renderConversionScreen() {
 
             <div class="conversion-story__problems">
               <p class="conversion-story__problems-lead">Помогаю женщинам навсегда забыть про:</p>
-              <p class="conversion-story__problem-line">лишний вес и проблемы с ЖКТ,</p>
-              <p class="conversion-story__problem-line">болезненные месячные и ПМС,</p>
-              <p class="conversion-story__problem-line">хроническую усталость и бессонницу.</p>
+              <ul class="conversion-story__problem-list">
+                <li class="conversion-story__problem-line">лишний вес и проблемы с ЖКТ,</li>
+                <li class="conversion-story__problem-line">болезненные месячные и ПМС,</li>
+                <li class="conversion-story__problem-line">хроническую усталость и бессонницу.</li>
+              </ul>
             </div>
 
             <p class="conversion-story__group-note">
